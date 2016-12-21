@@ -221,6 +221,112 @@ namespace OBOTool.Models
 
         #endregion
 
+        #region WDRF
+
+        [DisplayName("Proposal Letter?")]
+        public bool ProposalLetter { get; set; }
+
+        [DisplayName("Proposal Letter Date")]
+        public DateTime? ProposalLetterDate { get; set; }
+
+        [DisplayName("Election Letter?")]
+        public bool ElectionLetter { get; set; }
+
+        [DisplayName("Election Letter Date")]
+        public DateTime? ElectionLetterDate { get; set; }
+
+        [DisplayName("Daily Drilling Report?")]
+        public bool DailyDrillingReport { get; set; }
+
+        [DisplayName("Daily Drilling Report Date")]
+        public DateTime? DailyDrillingReportDate { get; set; }
+
+        [DisplayName("Final Directional Survey?")]
+        public bool FinalDirectionalSurvey { get; set; }
+
+        [DisplayName("Final Directional Survey Date")]
+        public DateTime? FinalDirectionalSurveyDate { get; set; }
+
+        [DisplayName("Open hole, cased hole, & processed logs?")]
+        public bool OpenHoleCasedHoleProcessedLogs { get; set; }
+
+        [DisplayName("Open hole, cased hole, & processed logs Date")]
+        public DateTime? OpenHoleCasedHoleProcessedLogsDate { get; set; }
+
+        [DisplayName("Final MWD?")]
+        public bool FinalMwd { get; set; }
+
+        [DisplayName("Final MWD Date")]
+        public DateTime? FinalMwdDate { get; set; }
+
+        [DisplayName("Mudlog Final Update (manned and unmanned)?")]
+        public bool MudlogFinalUpdate { get; set; }
+
+        [DisplayName("Mudlog Final Update (manned and unmanned) Date")]
+        public DateTime? MudlogFinalUpdateDate { get; set; }
+
+        [DisplayName("Core Reports, analyses and all related data (whole or sidewall core)?")]
+        public bool CoreReportsAnalysesAllRelatedData { get; set; }
+
+        [DisplayName("Core Reports, analyses and all related data (whole or sidewall core) Date")]
+        public DateTime? CoreReportsAnalysesAllRelatedDataDate { get; set; }
+
+        [DisplayName("Daily Completion Report?")]
+        public bool DailyCompletionReport { get; set; }
+
+        [DisplayName("Daily Completion Report Date")]
+        public DateTime? DailyCompletionReportDate { get; set; }
+
+        [DisplayName("Post Frac Report or Post Completion Report?")]
+        public bool PostFracReportOrPostCompletionReport { get; set; }
+
+        [DisplayName("Post Frac Report or Post Completion Report Date")]
+        public DateTime? PostFracReportOrPostCompletionReportDate { get; set; }
+
+        [DisplayName("Flowback Report?")]
+        public bool FlowbackReport { get; set; }
+
+        [DisplayName("Flowback Report Date")]
+        public DateTime? FlowbackReportDate { get; set; }
+
+        [DisplayName("Additional Product Testing?")]
+        public bool AdditionalProductTesting { get; set; }
+
+        [DisplayName("Additional Product Testing Date")]
+        public DateTime? AdditionalProductTestingDate { get; set; }
+
+        [DisplayName("Drill Stem Reports?")]
+        public bool DrillStemReport { get; set; }
+
+        [DisplayName("Drill Stem Reports Date")]
+        public DateTime? DrillStemReportDate { get; set; }
+
+        [DisplayName("Daily Production Reports?")]
+        public bool DailyProductionReport { get; set; }
+
+        [DisplayName("Daily Production Reports Date")]
+        public DateTime? DailyProductionReportDate { get; set; }
+
+        [DisplayName("Monthly Production Reports?")]
+        public bool MonthlyProductionReport { get; set; }
+
+        [DisplayName("Monthly Production Reports Date")]
+        public DateTime? MonthlyProductionReportDate { get; set; }
+
+        [DisplayName("Copy of Fully Executed Gas Contract?")]
+        public bool CopyOfGasContract { get; set; }
+
+        [DisplayName("Copy of Fully Executed Gas Contract Date")]
+        public DateTime? CopyOfGasContractDate { get; set; }
+
+        [DisplayName("Fully Executed State and Federal Forms?")]
+        public bool FullyExecutedStateAndFederalForms { get; set; }
+
+        [DisplayName("Fully Executed State and Federal Forms Date")]
+        public DateTime? FullyExecutedStateAndFederalFormsDate { get; set; }
+
+        #endregion
+
         public virtual BusinessUnit BusinessUnit { get; set; }
         public virtual Election Election { get; set; }
     }
