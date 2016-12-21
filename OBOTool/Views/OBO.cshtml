@@ -1,0 +1,455 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div id="wellHeaderHeading" class="panel-heading">Well Header</div>
+                <div class="panel-body" id="wellHeader">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="wellName">Well Name</label>
+                            <input type="text" class="form-control" id="wellName" value="ARBALEST 66-0607H" />
+                        </div>
+                        <div class="col-md-3">
+                            <label for="wellDuwi">Well DUWI-A</label>
+                            <input id="wellDuwi" type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="apiNumber">API Number</label>
+                            <input type="text" class="form-control" id="apiNumber">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="businessUnit">Business Unit</label>
+                            <select class="form-control" id="businessUnit">
+                                <option>Anadarko Basin</option>
+                                <option>Delaware Basin</option>
+                                <option>Delaware West Basin</option>
+                                <option>Delaware East Basin</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Field Name</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Partner AFE #</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Operator</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Election</label>
+                            <select class="form-control">
+                                <option></option>
+                                <option>Operated</option>
+                                <option>OBO - Elect In</option>
+                                <option>OBO - Elect Out</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>County</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>State</label>
+                            <select class="form-control">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Section</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Township</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Range</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Datum</label>
+                            <select class="form-control">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Latitude</label>
+                            <input type="number" class="form-control" />
+                        </div>
+                        <div class="col-md-3">
+                            <label>Longitude</label>
+                            <input type="number" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Proposals</div>
+
+                <div class="panel-body">
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Well Type</legend>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="control-label">Formation</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label># of Csg Strings</label>
+                                <input type="text" class=" form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="control-label">String 1 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 1 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>String 2 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 2 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>String 3 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 3 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>String 4 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 4 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Performance</legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Plan Days</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>AFE Cost</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Includes Construction?</label><br />
+                                <label><input type="radio" name="optIncludesConstruction">Yes</label>
+                                <label><input type="radio" name="optIncludesConstruction">No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Includes Rig Move?</label><br />
+                                <label><input type="radio" name="optIncludesRigMove">Yes</label>
+                                <label><input type="radio" name="optIncludesRigMove">No</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Includes Prod Csg/Cmt?</label><br />
+                                <label><input type="radio" name="optIncludesProdCsg">Yes</label>
+                                <label><input type="radio" name="optIncludesProdCsg">No</label>
+                            </div>
+                            <div class="col-md-6">
+                               
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Continuity</legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Batch Drilling?</label><br />
+                                <label><input type="radio" name="optradio">Yes</label>
+                                <label><input type="radio" name="optradio">No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Spudder Rig?</label><br />
+                                <label><input type="radio" name="optradio">Yes</label>
+                                <label><input type="radio" name="optradio">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Drilling Strategy</legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Total Depth</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>TVD</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Using RSS?</label>
+                                <label><input type="radio" name="optradio">Yes</label>
+                                <label><input type="radio" name="optradio">No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Lateral Length</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Mud Comments</legend>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Other Comments</legend>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Post Drill</div>
+
+                <div class="panel-body">
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Well Type</legend>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Formation</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label># of Csg Strings</label>
+                                <input type="text" class=" form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>String 1 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 1 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>String 2 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 2 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>String 3 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 3 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>String 4 Depth</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label>String 4 Desc</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Performance</legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Drilling Days</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>Field Estimate</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Actual Cost</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Includes Construction?</label><br />
+                                <label><input type="radio" name="optIncludesConstruction">Yes</label>
+                                <label><input type="radio" name="optIncludesConstruction">No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Includes Rig Move?</label><br />
+                                <label><input type="radio" name="optIncludesRigMove">Yes</label>
+                                <label><input type="radio" name="optIncludesRigMove">No</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Includes Prod Csg/Cmt?</label><br />
+                                <label><input type="radio" name="optIncludesProdCsg">Yes</label>
+                                <label><input type="radio" name="optIncludesProdCsg">No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Sidetrack?</label><br />
+                                <label><input type="radio" name="optSidetrack">Yes</label>
+                                <label><input type="radio" name="optSidetrack">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Continuity</legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Batch Drilling?</label><br />
+                                <label><input type="radio" name="optradio">Yes</label>
+                                <label><input type="radio" name="optradio">No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Spudder Rig?</label><br />
+                                <label><input type="radio" name="optradio">Yes</label>
+                                <label><input type="radio" name="optradio">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Drilling Strategy</legend>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Total Depth</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>TVD</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Using RSS?</label>
+                                <label><input type="radio" name="optradio">Yes</label>
+                                <label><input type="radio" name="optradio">No</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Lateral Length</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Mud Comments</legend>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="form-group-sm well well-sm">
+                        <legend>Other Comments</legend>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,492 @@
+﻿@model OBOTool.Models.WellDetail
+
+@{
+    ViewBag.Title = "Create Well";
+}
+
+<h2>Create Well</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="container">
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-3">
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+                <div class="col-md-9">
+                    <input type="submit" value="Create" class="btn btn-default pull-right" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div id="wellHeaderHeading" class="panel-heading" data-toggle="collapse" data-target="#wellHeader">Well Header</div>
+                    <div class="panel-body" id="wellHeader">
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Name)
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.ApiNumber)
+                                @Html.EditorFor(model => model.ApiNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ApiNumber, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Duwi)
+                                @Html.EditorFor(model => model.Duwi, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Duwi, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.BusinessUnitId)
+                                @Html.DropDownList("BusinessUnitId", null, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.BusinessUnitId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FieldName)
+                                @Html.EditorFor(model => model.FieldName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FieldName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.PartnerAfe)
+                                @Html.EditorFor(model => model.PartnerAfe, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PartnerAfe, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Operator)
+                                @Html.EditorFor(model => model.Operator, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Operator, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.ElectionId)
+                                @Html.DropDownList("ElectionId", null, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.County)
+                                @Html.EditorFor(model => model.County, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.County, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.State)
+                                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Section)
+                                @Html.EditorFor(model => model.Section, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Section, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Township)
+                                @Html.EditorFor(model => model.Township, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Township, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Range)
+                                @Html.EditorFor(model => model.Range, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Range, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Datum)
+                                @Html.EditorFor(model => model.Datum, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Datum, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Latitude)
+                                @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Latitude, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.Longitude)
+                                @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Longitude, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-target="#proposals">Proposals</div>
+                    <div class="panel-body" id="proposals">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @Html.LabelFor(model => model.ProposedEstimatedSpudDate)
+                                @Html.EditorFor(model => model.ProposedEstimatedSpudDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ProposedEstimatedSpudDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend data-toggle="collapse" data-target="#pWellType">Well Type</legend>
+                            <div id="pWellType">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedFormation)
+                                        @Html.EditorFor(model => model.ProposedFormation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedFormation, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedNumberOfCsgStrings)
+                                        @Html.EditorFor(model => model.ProposedNumberOfCsgStrings, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedNumberOfCsgStrings, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringOneDepth)
+                                        @Html.EditorFor(model => model.ProposedStringOneDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringOneDepth, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringOneDescription)
+                                        @Html.EditorFor(model => model.ProposedStringOneDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringOneDescription, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringTwoDepth)
+                                        @Html.EditorFor(model => model.ProposedStringTwoDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringTwoDescription)
+                                        @Html.EditorFor(model => model.ProposedStringTwoDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringThreeDepth)
+                                        @Html.EditorFor(model => model.ProposedStringThreeDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringThreeDescription)
+                                        @Html.EditorFor(model => model.ProposedStringThreeDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringFourDepth)
+                                        @Html.EditorFor(model => model.ProposedStringFourDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedStringFourDescription)
+                                        @Html.EditorFor(model => model.ProposedStringFourDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend data-toggle="collapse" data-target="#perf">Performance</legend>
+                            <div id="perf">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedPlanDays)
+                                        @Html.EditorFor(model => model.ProposedPlanDays, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedAfeCost)
+                                        @Html.EditorFor(model => model.ProposedAfeCost, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedIncludesConstruction)
+                                        @Html.EditorFor(model => model.ProposedIncludesConstruction)
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedIncludesRigMove)
+                                        @Html.EditorFor(model => model.ProposedIncludesRigMove)
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.ProposedIncludesProdCsgCmt)
+                                        @Html.EditorFor(model => model.ProposedIncludesProdCsgCmt)
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Continuity</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.ProposedBatchDrilling)
+                                    @Html.EditorFor(model => model.ProposedBatchDrilling)
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.ProposedSpudderRig)
+                                    @Html.EditorFor(model => model.ProposedSpudderRig)
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Drilling Strategy</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.ProposedTotalDepth)
+                                    @Html.EditorFor(model => model.ProposedTotalDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.ProposedTvd)
+                                    @Html.EditorFor(model => model.ProposedTvd, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.ProposedUsingRss)
+                                    @Html.EditorFor(model => model.ProposedUsingRss)
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.ProposedLateralLength)
+                                    @Html.EditorFor(model => model.ProposedLateralLength, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Mud Comments</legend>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.ProposedMudComments, 5, 40, new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Other Comments</legend>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.ProposedOtherComments, 5, 40, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-target="#postDrill">Post Drill</div>
+
+                    <div class="panel-body" id="postDrill">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.PostDrillSpudDate)
+                                @Html.EditorFor(model => model.PostDrillSpudDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PostDrillSpudDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.PostDrillRRDate)
+                                @Html.EditorFor(model => model.PostDrillRRDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PostDrillRRDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend data-toggle="collapse" data-target="#pdWellType">Well Type</legend>
+                            <div id="pdWellType">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillFormation)
+                                        @Html.EditorFor(model => model.PostDrillFormation, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillNumberOfCsgStrings)
+                                        @Html.EditorFor(model => model.PostDrillNumberOfCsgStrings, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringOneDepth)
+                                        @Html.EditorFor(model => model.PostDrillStringOneDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringOneDescription)
+                                        @Html.EditorFor(model => model.PostDrillStringOneDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringTwoDepth)
+                                        @Html.EditorFor(model => model.PostDrillStringTwoDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringTwoDescription)
+                                        @Html.EditorFor(model => model.PostDrillStringTwoDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringThreeDepth)
+                                        @Html.EditorFor(model => model.PostDrillStringThreeDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringThreeDescription)
+                                        @Html.EditorFor(model => model.PostDrillStringThreeDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringFourDepth)
+                                        @Html.EditorFor(model => model.PostDrillStringFourDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillStringFourDescription)
+                                        @Html.EditorFor(model => model.PostDrillStringFourDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend data-toggle="collapse" data-target="#pdPerf">Performance</legend>
+                            <div id="pdPerf">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillDrillingDays)
+                                        @Html.EditorFor(model => model.PostDrillDrillingDays, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillFieldEstimate)
+                                        @Html.EditorFor(model => model.PostDrillFieldEstimate, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillActualCost)
+                                        @Html.EditorFor(model => model.PostDrillActualCost, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillIncludesConstruction)
+                                        @Html.EditorFor(model => model.PostDrillIncludesConstruction)
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillIncludesRigMove)
+                                        @Html.EditorFor(model => model.PostDrillIncludesRigMove)
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillIncludesProdCsgCmt)
+                                        @Html.EditorFor(model => model.PostDrillIncludesProdCsgCmt)
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(model => model.PostDrillSidetrack)
+                                        @Html.EditorFor(model => model.PostDrillSidetrack)
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Continuity</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.PostDrillBatchDrilling)
+                                    @Html.EditorFor(model => model.PostDrillBatchDrilling)
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.PostDrillSpudderRig)
+                                    @Html.EditorFor(model => model.PostDrillSpudderRig)
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Drilling Strategy</legend>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.PostDrillTotalDepth)
+                                    @Html.EditorFor(model => model.PostDrillTotalDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.PostDrillTvd)
+                                    @Html.EditorFor(model => model.PostDrillTvd, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.PostDrillUsingRss)
+                                    @Html.EditorFor(model => model.PostDrillUsingRss, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.PostDrillLateralLength)
+                                    @Html.EditorFor(model => model.PostDrillLateralLength, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Mud Comments</legend>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.PostDrillMudComments, 5, 40, new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <fieldset class="form-group-sm well well-sm">
+                            <legend>Other Comments</legend>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.PostDrillOtherComments, 5, 40, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
