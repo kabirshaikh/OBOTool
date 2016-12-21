@@ -25,107 +25,304 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div id="wellHeaderHeading" class="panel-heading" data-toggle="collapse" data-target="#wellHeader">Well Header</div>
-                    <div class="panel-body" id="wellHeader">
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Name)
-                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.ApiNumber)
-                                @Html.EditorFor(model => model.ApiNumber, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.ApiNumber, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Duwi)
-                                @Html.EditorFor(model => model.Duwi, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Duwi, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.BusinessUnitId)
-                                @Html.DropDownList("BusinessUnitId", null, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.BusinessUnitId, "", new { @class = "text-danger" })
-                            </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div id="wellHeaderHeading" class="panel-heading" data-toggle="collapse" data-target="#wellHeader">Well Header</div>
+                <div class="panel-body" id="wellHeader">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Name)
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                         </div>
-
-
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.FieldName)
-                                @Html.EditorFor(model => model.FieldName, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.FieldName, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.PartnerAfe)
-                                @Html.EditorFor(model => model.PartnerAfe, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.PartnerAfe, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Operator)
-                                @Html.EditorFor(model => model.Operator, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Operator, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.ElectionId)
-                                @Html.DropDownList("ElectionId", null, new { @class = "form-control" })
-                            </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.ApiNumber)
+                            @Html.EditorFor(model => model.ApiNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ApiNumber, "", new { @class = "text-danger" })
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.County)
-                                @Html.EditorFor(model => model.County, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.County, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.State)
-                                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Section)
-                                @Html.EditorFor(model => model.Section, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Section, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Township)
-                                @Html.EditorFor(model => model.Township, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Township, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Duwi)
+                            @Html.EditorFor(model => model.Duwi, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Duwi, "", new { @class = "text-danger" })
                         </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.BusinessUnitId)
+                            @Html.DropDownList("BusinessUnitId", null, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.BusinessUnitId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Range)
-                                @Html.EditorFor(model => model.Range, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Range, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Datum)
-                                @Html.EditorFor(model => model.Datum, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Datum, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Latitude)
-                                @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Latitude, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-3">
-                                @Html.LabelFor(model => model.Longitude)
-                                @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Longitude, "", new { @class = "text-danger" })
-                            </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.FieldName)
+                            @Html.EditorFor(model => model.FieldName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.FieldName, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.PartnerAfe)
+                            @Html.EditorFor(model => model.PartnerAfe, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.PartnerAfe, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Operator)
+                            @Html.EditorFor(model => model.Operator, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Operator, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.ElectionId)
+                            @Html.DropDownList("ElectionId", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.County)
+                            @Html.EditorFor(model => model.County, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.County, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.State)
+                            @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Section)
+                            @Html.EditorFor(model => model.Section, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Section, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Township)
+                            @Html.EditorFor(model => model.Township, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Township, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Range)
+                            @Html.EditorFor(model => model.Range, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Range, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Datum)
+                            @Html.EditorFor(model => model.Datum, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Datum, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Latitude)
+                            @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Latitude, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.LabelFor(model => model.Longitude)
+                            @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Longitude, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+        
         <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="collapse" data-target="#wdrf">WDRF</div>
+                    <div class="panel-body" id="wdrf">
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.ProposalLetter)
+                                @Html.EditorFor(model => model.ProposalLetter)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.ProposalLetterDate)
+                                @Html.EditorFor(model => model.ProposalLetterDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ProposalLetterDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.ElectionLetter)
+                                @Html.EditorFor(model => model.ElectionLetter)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.ElectionLetterDate)
+                                @Html.EditorFor(model => model.ElectionLetterDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ElectionLetterDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DailyDrillingReport)
+                                @Html.EditorFor(model => model.DailyDrillingReport)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DailyDrillingReportDate)
+                                @Html.EditorFor(model => model.DailyDrillingReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DailyDrillingReportDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FinalDirectionalSurvey)
+                                @Html.EditorFor(model => model.FinalDirectionalSurvey)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FinalDirectionalSurveyDate)
+                                @Html.EditorFor(model => model.FinalDirectionalSurveyDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FinalDirectionalSurveyDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.OpenHoleCasedHoleProcessedLogs)
+                                @Html.EditorFor(model => model.OpenHoleCasedHoleProcessedLogs)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.OpenHoleCasedHoleProcessedLogsDate)
+                                @Html.EditorFor(model => model.OpenHoleCasedHoleProcessedLogsDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.OpenHoleCasedHoleProcessedLogsDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FinalMwd)
+                                @Html.EditorFor(model => model.FinalMwd)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FinalMwdDate)
+                                @Html.EditorFor(model => model.FinalMwdDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FinalMwdDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.MudlogFinalUpdate)
+                                @Html.EditorFor(model => model.MudlogFinalUpdate)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.MudlogFinalUpdateDate)
+                                @Html.EditorFor(model => model.MudlogFinalUpdateDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MudlogFinalUpdateDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.CoreReportsAnalysesAllRelatedData)
+                                @Html.EditorFor(model => model.CoreReportsAnalysesAllRelatedData)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.CoreReportsAnalysesAllRelatedDataDate)
+                                @Html.EditorFor(model => model.CoreReportsAnalysesAllRelatedDataDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CoreReportsAnalysesAllRelatedDataDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DailyCompletionReport)
+                                @Html.EditorFor(model => model.DailyCompletionReport)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DailyCompletionReportDate)
+                                @Html.EditorFor(model => model.DailyCompletionReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DailyCompletionReportDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.PostFracReportOrPostCompletionReport)
+                                @Html.EditorFor(model => model.PostFracReportOrPostCompletionReport)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.PostFracReportOrPostCompletionReportDate)
+                                @Html.EditorFor(model => model.PostFracReportOrPostCompletionReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PostFracReportOrPostCompletionReportDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FlowbackReport)
+                                @Html.EditorFor(model => model.FlowbackReport)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FlowbackReportDate)
+                                @Html.EditorFor(model => model.FlowbackReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FlowbackReportDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.AdditionalProductTesting)
+                                @Html.EditorFor(model => model.AdditionalProductTesting)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.AdditionalProductTestingDate)
+                                @Html.EditorFor(model => model.AdditionalProductTestingDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.AdditionalProductTestingDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DrillStemReport)
+                                @Html.EditorFor(model => model.DrillStemReport)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DrillStemReportDate)
+                                @Html.EditorFor(model => model.DrillStemReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DrillStemReportDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DailyProductionReport)
+                                @Html.EditorFor(model => model.DailyProductionReport)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.DailyProductionReportDate)
+                                @Html.EditorFor(model => model.DailyProductionReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DailyProductionReportDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.MonthlyProductionReport)
+                                @Html.EditorFor(model => model.MonthlyProductionReport)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.MonthlyProductionReportDate)
+                                @Html.EditorFor(model => model.MonthlyProductionReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MonthlyProductionReportDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.CopyOfGasContract)
+                                @Html.EditorFor(model => model.CopyOfGasContract)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.CopyOfGasContractDate)
+                                @Html.EditorFor(model => model.CopyOfGasContractDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CopyOfGasContractDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FullyExecutedStateAndFederalForms)
+                                @Html.EditorFor(model => model.FullyExecutedStateAndFederalForms)
+                            </div>
+                            <div class="col-md-3">
+                                @Html.LabelFor(model => model.FullyExecutedStateAndFederalFormsDate)
+                                @Html.EditorFor(model => model.FullyExecutedStateAndFederalFormsDate, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FullyExecutedStateAndFederalFormsDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-3">
+
+                            </div>
+                            <div class="col-md-3">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading" data-toggle="collapse" data-target="#proposals">Proposals</div>
