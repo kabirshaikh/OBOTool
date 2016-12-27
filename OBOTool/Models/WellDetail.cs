@@ -7,10 +7,13 @@ namespace OBOTool.Models
 {
     public class WellDetail
     {
+        private const string DateFormatString = "{0:MM/dd/yyyy}";
+
         public int Id { get; set; }
 
         public string Commenter { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Comment Date")]
         public DateTime? CommentDate { get; set; }
 
@@ -46,6 +49,7 @@ namespace OBOTool.Models
         #endregion
 
         #region Proposed Section
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Estimated Spud Date")]
         public DateTime? ProposedEstimatedSpudDate { get; set; }
 
@@ -87,6 +91,7 @@ namespace OBOTool.Models
         [DisplayName("Plan Days")]
         public int? ProposedPlanDays { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("AFE Cost")]
         public double? ProposedAfeCost { get; set; }
 
@@ -124,14 +129,18 @@ namespace OBOTool.Models
 
         #endregion
 
+        [DisplayName("Mud Comments")]
         public string ProposedMudComments { get; set; }
+        [DisplayName("Other Comments")]
         public string ProposedOtherComments { get; set; }
 
         #endregion
 
         #region Post Drill Section 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Spud Date")]
         public DateTime? PostDrillSpudDate { get; set; }
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("RR Date")]
         public DateTime? PostDrillRRDate { get; set; }
 
@@ -170,12 +179,13 @@ namespace OBOTool.Models
 
         #region Performance
 
-        [DisplayName("Plan Days")]
+        [DisplayName("Drilling Days")]
         public int? PostDrillDrillingDays { get; set; }
 
         [DisplayName("Field Estimate")]
         public double? PostDrillFieldEstimate { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:c}")]
         [DisplayName("Actual Cost")]
         public double? PostDrillActualCost { get; set; }
 
@@ -216,7 +226,10 @@ namespace OBOTool.Models
 
         #endregion
 
+        [DisplayName("Mud Comments")]
         public string PostDrillMudComments { get; set; }
+
+        [DisplayName("Other Comments")]
         public string PostDrillOtherComments { get; set; }
 
         #endregion
@@ -226,102 +239,120 @@ namespace OBOTool.Models
         [DisplayName("Proposal Letter?")]
         public bool ProposalLetter { get; set; }
 
+
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Proposal Letter Date")]
         public DateTime? ProposalLetterDate { get; set; }
 
         [DisplayName("Election Letter?")]
         public bool ElectionLetter { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Election Letter Date")]
         public DateTime? ElectionLetterDate { get; set; }
 
         [DisplayName("Daily Drilling Report?")]
         public bool DailyDrillingReport { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Daily Drilling Report Date")]
         public DateTime? DailyDrillingReportDate { get; set; }
 
         [DisplayName("Final Directional Survey?")]
         public bool FinalDirectionalSurvey { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Final Directional Survey Date")]
         public DateTime? FinalDirectionalSurveyDate { get; set; }
 
         [DisplayName("Open hole, cased hole, & processed logs?")]
         public bool OpenHoleCasedHoleProcessedLogs { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Open hole, cased hole, & processed logs Date")]
         public DateTime? OpenHoleCasedHoleProcessedLogsDate { get; set; }
 
         [DisplayName("Final MWD?")]
         public bool FinalMwd { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Final MWD Date")]
         public DateTime? FinalMwdDate { get; set; }
 
         [DisplayName("Mudlog Final Update (manned and unmanned)?")]
         public bool MudlogFinalUpdate { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Mudlog Final Update (manned and unmanned) Date")]
         public DateTime? MudlogFinalUpdateDate { get; set; }
 
         [DisplayName("Core Reports, analyses and all related data (whole or sidewall core)?")]
         public bool CoreReportsAnalysesAllRelatedData { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Core Reports, analyses and all related data (whole or sidewall core) Date")]
         public DateTime? CoreReportsAnalysesAllRelatedDataDate { get; set; }
 
         [DisplayName("Daily Completion Report?")]
         public bool DailyCompletionReport { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Daily Completion Report Date")]
         public DateTime? DailyCompletionReportDate { get; set; }
 
         [DisplayName("Post Frac Report or Post Completion Report?")]
         public bool PostFracReportOrPostCompletionReport { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Post Frac Report or Post Completion Report Date")]
         public DateTime? PostFracReportOrPostCompletionReportDate { get; set; }
 
         [DisplayName("Flowback Report?")]
         public bool FlowbackReport { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Flowback Report Date")]
         public DateTime? FlowbackReportDate { get; set; }
 
         [DisplayName("Additional Product Testing?")]
         public bool AdditionalProductTesting { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Additional Product Testing Date")]
         public DateTime? AdditionalProductTestingDate { get; set; }
 
         [DisplayName("Drill Stem Reports?")]
         public bool DrillStemReport { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Drill Stem Reports Date")]
         public DateTime? DrillStemReportDate { get; set; }
 
         [DisplayName("Daily Production Reports?")]
         public bool DailyProductionReport { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Daily Production Reports Date")]
         public DateTime? DailyProductionReportDate { get; set; }
 
         [DisplayName("Monthly Production Reports?")]
         public bool MonthlyProductionReport { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Monthly Production Reports Date")]
         public DateTime? MonthlyProductionReportDate { get; set; }
 
         [DisplayName("Copy of Fully Executed Gas Contract?")]
         public bool CopyOfGasContract { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Copy of Fully Executed Gas Contract Date")]
         public DateTime? CopyOfGasContractDate { get; set; }
 
         [DisplayName("Fully Executed State and Federal Forms?")]
         public bool FullyExecutedStateAndFederalForms { get; set; }
 
+        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Fully Executed State and Federal Forms Date")]
         public DateTime? FullyExecutedStateAndFederalFormsDate { get; set; }
 

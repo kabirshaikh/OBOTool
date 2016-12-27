@@ -22,3 +22,192 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.datepicker {
+    width: 170px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 2px;
+    background-color: aliceblue;
+}
+
+.loading-image {
+    width: 60px;
+    background: #fefefe;
+}
+
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 1px solid #111;
+    padding: 5px 22px;
+    /*border-top: 1px solid #111;*/
+    /*border-radius: 3px;*/
+    text-align: center;
+    background: #00b4cd;
+    color: white;
+    font-size: 11px;
+}
+
+.OnePair, .OnePair_First {
+    display: table-row;
+}
+
+.OnePair {
+    clear: both;
+}
+
+.OnePair_Name {
+    font-weight: bold;
+    font-size: 11px;
+    max-width: 220px;
+}
+
+.OnePair_Value {
+    min-width: 80px;
+    padding-left: 5px;
+    font-size: 11px;
+}
+
+.OnePair_Name, .OnePair_Value {
+    display: table-cell;
+    border-bottom: 1px solid #aaa;
+}
+
+.OnePair_Merge {
+    min-width: 250px;
+    padding-left: 5px;
+    font-size: 11px;
+}
+
+.MBU_OuterContainerRow {
+    display: table-row;
+}
+
+[id*="BusinessDataWebPart"] {
+    display: none;
+}
+
+#ShowHideWellDetails {
+    margin-top: 10px;
+    color: blue;
+    cursor: pointer;
+    font-size: 11px;
+    text-decoration: underline;
+}
+
+.OnHover:hover {
+    color: #0072c6;
+    text-decoration: underline;
+}
+
+.display_Block {
+    display: inline-block;
+}
+
+.display_None {
+    display: none;
+}
+
+.cursor_Pointer {
+    cursor: pointer;
+}
+
+.cursor_Default {
+    cursor: default;
+}
+
+#origin, #completion, #wellbore {
+    width: auto;
+    font-size: 20px;
+}
+
+#pageTitleBDCDriven {
+    width: auto;
+    display: block;
+}
+
+#leftArrow, #rightArrow {
+    width: auto;
+    color: #666;
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.MBU_OuterContainer {
+    display: table;
+}
+
+.MBU_InnerSections {
+    display: table-cell;
+    padding-right: 10px;
+}
+
+    .MBU_InnerSections > div {
+        display: table;
+    }
+
+.LocationContainerRow {
+    display: table-row;
+}
+
+.LocationLeftCell {
+    padding-right: 10px;
+    display: table-cell;
+}
+
+
+.LocationRightCell {
+    display: table-cell;
+}
+
+.LocationLeftTable, .LocationRightTable {
+    display: table;
+}
+
+.header_wrapper {
+    background: rgb(226,226,226); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 4%, rgba(254,254,254,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(4%,rgba(219,219,219,1)), color-stop(100%,rgba(254,254,254,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 4%,rgba(254,254,254,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 4%,rgba(254,254,254,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 4%,rgba(254,254,254,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 4%,rgba(254,254,254,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 ); /* IE6-9 */
+    /*background-color:#d3d3d3;
+    padding: 2px;*/
+    color: #00b4cd;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: underline;
+    /*float:right;*/
+    text-align: right;
+    font-size: 11px;
+    padding-right: 3%;
+    padding-top: 5px;
+    margin-right: 3%;
+    min-width: 100%;
+    height: 25px;
+}
+
+.header {
+    width: 120px;
+    background-color: #00b4cd;
+    float: left;
+    padding: 10px;
+    margin: 10px 0 5px 0;
+    text-align: center;
+    color: #FFF;
+}
+
+td {
+    font-size: 11px;
+}
+
+.panel-default > .panel-heading {
+    color: #FFF;
+    background-color: #00b4cd;
+    font-size: 18px;
+    text-align: center;
+}

@@ -70,6 +70,7 @@ namespace OBOTool.Controllers
         }
 
         // GET: WellDetails/Edit/5
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -84,6 +85,7 @@ namespace OBOTool.Controllers
             ViewBag.BusinessUnitId = new SelectList(db.BusinessUnits, "Id", "Name", wellDetail.BusinessUnitId);
             ViewBag.ElectionId = new SelectList(db.Elections, "Id", "Name", wellDetail.ElectionId);
             return View(wellDetail);
+            
         }
 
         // POST: WellDetails/Edit/5
@@ -91,17 +93,20 @@ namespace OBOTool.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Commenter,CommentDate,Name,ApiNumber,Duwi,BusinessUnitId,FieldName,PartnerAfe,Operator,ElectionId,County,State,Section,Township,Range,Datum,Latitude,Longitude,ProposedEstimatedSpudDate,ProposedFormation,ProposedNumberOfCsgStrings,ProposedStringOneDepth,ProposedStringOneDescription,ProposedStringTwoDepth,ProposedStringTwoDescription,ProposedStringThreeDepth,ProposedStringThreeDescription,ProposedStringFourDepth,ProposedStringFourDescription,ProposedPlanDays,ProposedAfeCost,ProposedIncludesConstruction,ProposedIncludesRigMove,ProposedIncludesProdCsgCmt,ProposedBatchDrilling,ProposedSpudderRig,ProposedTotalDepth,ProposedTvd,ProposedLateralLength,ProposedUsingRss,ProposedMudComments,ProposedOtherComments,PostDrillSpudDate,PostDrillRRDate,PostDrillFormation,PostDrillNumberOfCsgStrings,PostDrillStringOneDepth,PostDrillStringOneDescription,PostDrillStringTwoDepth,PostDrillStringTwoDescription,PostDrillStringThreeDepth,PostDrillStringThreeDescription,PostDrillStringFourDepth,PostDrillStringFourDescription,PostDrillDrillingDays,PostDrillFieldEstimate,PostDrillActualCost,PostDrillIncludesConstruction,PostDrillIncludesRigMove,PostDrillIncludesProdCsgCmt,PostDrillSidetrack,PostDrillBatchDrilling,PostDrillSpudderRig,PostDrillTotalDepth,PostDrillTvd,PostDrillLateralLength,PostDrillUsingRss,PostDrillMudComments,PostDrillOtherComments,ProposalLetter,ProposalLetterDate,ElectionLetter,ElectionLetterDate,DailyDrillingReport,DailyDrillingReportDate,FinalDirectionalSurvey,FinalDirectionalSurveyDate,OpenHoleCasedHoleProcessedLogs,OpenHoleCasedHoleProcessedLogsDate,FinalMwd,FinalMwdDate,MudlogFinalUpdate,MudlogFinalUpdateDate,CoreReportsAnalysesAllRelatedData,CoreReportsAnalysesAllRelatedDataDate,DailyCompletionReport,DailyCompletionReportDate,PostFracReportOrPostCompletionReport,PostFracReportOrPostCompletionReportDate,FlowbackReport,FlowbackReportDate,AdditionalProductTesting,AdditionalProductTestingDate,DrillStemReport,DrillStemReportDate,DailyProductionReport,DailyProductionReportDate,MonthlyProductionReport,MonthlyProductionReportDate,CopyOfGasContract,CopyOfGasContractDate,FullyExecutedStateAndFederalForms,FullyExecutedStateAndFederalFormsDate")] WellDetail wellDetail)
+        public JsonResult Edit([Bind(Include = "Id,Commenter,CommentDate,Name,ApiNumber,Duwi,BusinessUnitId,FieldName,PartnerAfe,Operator,ElectionId,County,State,Section,Township,Range,Datum,Latitude,Longitude,ProposedEstimatedSpudDate,ProposedFormation,ProposedNumberOfCsgStrings,ProposedStringOneDepth,ProposedStringOneDescription,ProposedStringTwoDepth,ProposedStringTwoDescription,ProposedStringThreeDepth,ProposedStringThreeDescription,ProposedStringFourDepth,ProposedStringFourDescription,ProposedPlanDays,ProposedAfeCost,ProposedIncludesConstruction,ProposedIncludesRigMove,ProposedIncludesProdCsgCmt,ProposedBatchDrilling,ProposedSpudderRig,ProposedTotalDepth,ProposedTvd,ProposedLateralLength,ProposedUsingRss,ProposedMudComments,ProposedOtherComments,PostDrillSpudDate,PostDrillRRDate,PostDrillFormation,PostDrillNumberOfCsgStrings,PostDrillStringOneDepth,PostDrillStringOneDescription,PostDrillStringTwoDepth,PostDrillStringTwoDescription,PostDrillStringThreeDepth,PostDrillStringThreeDescription,PostDrillStringFourDepth,PostDrillStringFourDescription,PostDrillDrillingDays,PostDrillFieldEstimate,PostDrillActualCost,PostDrillIncludesConstruction,PostDrillIncludesRigMove,PostDrillIncludesProdCsgCmt,PostDrillSidetrack,PostDrillBatchDrilling,PostDrillSpudderRig,PostDrillTotalDepth,PostDrillTvd,PostDrillLateralLength,PostDrillUsingRss,PostDrillMudComments,PostDrillOtherComments,ProposalLetter,ProposalLetterDate,ElectionLetter,ElectionLetterDate,DailyDrillingReport,DailyDrillingReportDate,FinalDirectionalSurvey,FinalDirectionalSurveyDate,OpenHoleCasedHoleProcessedLogs,OpenHoleCasedHoleProcessedLogsDate,FinalMwd,FinalMwdDate,MudlogFinalUpdate,MudlogFinalUpdateDate,CoreReportsAnalysesAllRelatedData,CoreReportsAnalysesAllRelatedDataDate,DailyCompletionReport,DailyCompletionReportDate,PostFracReportOrPostCompletionReport,PostFracReportOrPostCompletionReportDate,FlowbackReport,FlowbackReportDate,AdditionalProductTesting,AdditionalProductTestingDate,DrillStemReport,DrillStemReportDate,DailyProductionReport,DailyProductionReportDate,MonthlyProductionReport,MonthlyProductionReportDate,CopyOfGasContract,CopyOfGasContractDate,FullyExecutedStateAndFederalForms,FullyExecutedStateAndFederalFormsDate")] WellDetail wellDetail)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(wellDetail).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+
+                return Json("Save Successful");
             }
             ViewBag.BusinessUnitId = new SelectList(db.BusinessUnits, "Id", "Name", wellDetail.BusinessUnitId);
             ViewBag.ElectionId = new SelectList(db.Elections, "Id", "Name", wellDetail.ElectionId);
-            return View(wellDetail);
+            //return View(wellDetail);
+            return Json(wellDetail);
         }
 
         // GET: WellDetails/Delete/5
