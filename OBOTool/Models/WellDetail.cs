@@ -50,6 +50,7 @@ namespace OBOTool.Models
 
         #region Proposed Section
         [DisplayFormat(DataFormatString = DateFormatString)]
+        [DataType(DataType.DateTime)]
         [DisplayName("Estimated Spud Date")]
         public DateTime? ProposedEstimatedSpudDate { get; set; }
 
@@ -91,8 +92,8 @@ namespace OBOTool.Models
         [DisplayName("Plan Days")]
         public int? ProposedPlanDays { get; set; }
 
-        [DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("AFE Cost")]
+        [DataType(DataType.Currency)]
         public double? ProposedAfeCost { get; set; }
 
         [DisplayName("Includes Construction?")]
@@ -137,11 +138,14 @@ namespace OBOTool.Models
         #endregion
 
         #region Post Drill Section 
-        [DisplayFormat(DataFormatString = DateFormatString)]
+        //[DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("Spud Date")]
+        [DataType(DataType.DateTime)]
         public DateTime? PostDrillSpudDate { get; set; }
-        [DisplayFormat(DataFormatString = DateFormatString)]
+
+        //[DisplayFormat(DataFormatString = DateFormatString)]
         [DisplayName("RR Date")]
+        [DataType(DataType.DateTime)]
         public DateTime? PostDrillRRDate { get; set; }
 
         #region WellType
@@ -185,7 +189,8 @@ namespace OBOTool.Models
         [DisplayName("Field Estimate")]
         public double? PostDrillFieldEstimate { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:c}")]
+        //[DisplayFormat(DataFormatString = "{0:c}")]
+        [DataType(DataType.Currency)]
         [DisplayName("Actual Cost")]
         public double? PostDrillActualCost { get; set; }
 

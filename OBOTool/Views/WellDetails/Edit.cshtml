@@ -19,6 +19,7 @@
     @Html.HiddenFor(model => model.Id)
     <div id="saveMessage"></div>
     <div class="container">
+
         <div class="row">
             <div class="form-group">
                 <div class="col-md-3">
@@ -27,6 +28,17 @@
                 <div class="col-md-9">
                     <input type="submit" value="Save" class="btn btn-default pull-right" />
                 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.Commenter)
+                @Html.DisplayTextFor(model => model.Commenter)
+            </div>
+            <div class="col-md-6">
+                @Html.LabelFor(model => model.CommentDate)
+                @Html.DisplayTextFor(model => model.CommentDate)
             </div>
         </div>
 
@@ -57,7 +69,6 @@
                                 @Html.ValidationMessageFor(model => model.BusinessUnitId, "", new { @class = "text-danger" })
                             </div>
                         </div>
-
 
                         <div class="row">
                             <div class="col-md-3">
@@ -372,10 +383,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedStringTwoDepth)
                                         @Html.EditorFor(model => model.ProposedStringTwoDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringTwoDepth, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedStringTwoDescription)
                                         @Html.EditorFor(model => model.ProposedStringTwoDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringTwoDescription, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -383,10 +396,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedStringThreeDepth)
                                         @Html.EditorFor(model => model.ProposedStringThreeDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringThreeDepth, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedStringThreeDescription)
                                         @Html.EditorFor(model => model.ProposedStringThreeDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringThreeDescription, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -394,10 +409,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedStringFourDepth)
                                         @Html.EditorFor(model => model.ProposedStringFourDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringFourDepth, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedStringFourDescription)
                                         @Html.EditorFor(model => model.ProposedStringFourDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedStringFourDescription, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                             </div>
@@ -410,10 +427,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedPlanDays)
                                         @Html.EditorFor(model => model.ProposedPlanDays, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedPlanDays, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.ProposedAfeCost)
                                         @Html.EditorFor(model => model.ProposedAfeCost, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProposedAfeCost, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -460,10 +479,12 @@
                                 <div class="col-md-6">
                                     @Html.LabelFor(model => model.ProposedTotalDepth)
                                     @Html.EditorFor(model => model.ProposedTotalDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ProposedTotalDepth, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="col-md-6">
                                     @Html.LabelFor(model => model.ProposedTvd)
                                     @Html.EditorFor(model => model.ProposedTvd, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ProposedTvd, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="row">
@@ -474,6 +495,7 @@
                                 <div class="col-md-6">
                                     @Html.LabelFor(model => model.ProposedLateralLength)
                                     @Html.EditorFor(model => model.ProposedLateralLength, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ProposedLateralLength, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                         </fieldset>
@@ -483,6 +505,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     @Html.TextAreaFor(model => model.ProposedMudComments, 5, 40, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ProposedMudComments, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 
@@ -493,6 +516,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     @Html.TextAreaFor(model => model.ProposedOtherComments, 5, 40, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.ProposedOtherComments, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                         </fieldset>
@@ -525,10 +549,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillFormation)
                                         @Html.EditorFor(model => model.PostDrillFormation, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillFormation, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillNumberOfCsgStrings)
                                         @Html.EditorFor(model => model.PostDrillNumberOfCsgStrings, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillNumberOfCsgStrings, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -536,10 +562,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringOneDepth)
                                         @Html.EditorFor(model => model.PostDrillStringOneDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringOneDepth, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringOneDescription)
                                         @Html.EditorFor(model => model.PostDrillStringOneDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringOneDescription, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -547,10 +575,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringTwoDepth)
                                         @Html.EditorFor(model => model.PostDrillStringTwoDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringTwoDepth, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringTwoDescription)
                                         @Html.EditorFor(model => model.PostDrillStringTwoDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringTwoDescription, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -558,10 +588,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringThreeDepth)
                                         @Html.EditorFor(model => model.PostDrillStringThreeDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringThreeDepth, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringThreeDescription)
                                         @Html.EditorFor(model => model.PostDrillStringThreeDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringThreeDescription, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -569,10 +601,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringFourDepth)
                                         @Html.EditorFor(model => model.PostDrillStringFourDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringFourDepth, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillStringFourDescription)
                                         @Html.EditorFor(model => model.PostDrillStringFourDescription, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillStringFourDescription, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                             </div>
@@ -585,10 +619,12 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillDrillingDays)
                                         @Html.EditorFor(model => model.PostDrillDrillingDays, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillDrillingDays, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillFieldEstimate)
                                         @Html.EditorFor(model => model.PostDrillFieldEstimate, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillFieldEstimate, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
@@ -596,6 +632,7 @@
                                     <div class="col-md-6">
                                         @Html.LabelFor(model => model.PostDrillActualCost)
                                         @Html.EditorFor(model => model.PostDrillActualCost, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PostDrillActualCost, "", new { @class = "text-danger" })
                                     </div>
                                     <div class="col-md-6">
 
@@ -645,11 +682,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     @Html.LabelFor(model => model.PostDrillTotalDepth)
-                                    @Html.EditorFor(model => model.PostDrillTotalDepth, new {htmlAttributes = new {@class = "form-control"}})
+                                    @Html.EditorFor(model => model.PostDrillTotalDepth, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.PostDrillTotalDepth, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="col-md-6">
                                     @Html.LabelFor(model => model.PostDrillTvd)
                                     @Html.EditorFor(model => model.PostDrillTvd, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.PostDrillTvd, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="row">
@@ -660,6 +699,7 @@
                                 <div class="col-md-6">
                                     @Html.LabelFor(model => model.PostDrillLateralLength)
                                     @Html.EditorFor(model => model.PostDrillLateralLength, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.PostDrillLateralLength, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                         </fieldset>
@@ -669,9 +709,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     @Html.TextAreaFor(model => model.PostDrillMudComments, 5, 40, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.PostDrillMudComments, "", new { @class = "text-danger" })
                                 </div>
                             </div>
-
                         </fieldset>
 
                         <fieldset class="form-group-sm well well-sm">
@@ -679,6 +719,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     @Html.TextAreaFor(model => model.PostDrillOtherComments, 5, 40, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.PostDrillOtherComments, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                         </fieldset>
@@ -690,14 +731,6 @@
 }
 
 
-
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-<script type="text/javascript">
-    /*function updateSuccess(data) {
-        //console.log(data);
-        $("#saveMessage").html(data);
-    }*/
-</script>

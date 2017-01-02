@@ -59,6 +59,8 @@ namespace OBOTool.Controllers
         {
             if (ModelState.IsValid)
             {
+                wellDetail.Commenter = User.Identity.Name;
+                wellDetail.CommentDate = DateTime.Now;
                 db.WellDetails.Add(wellDetail);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -97,6 +99,8 @@ namespace OBOTool.Controllers
         {
             if (ModelState.IsValid)
             {
+                wellDetail.Commenter = User.Identity.Name;
+                wellDetail.CommentDate = DateTime.Now;
                 db.Entry(wellDetail).State = EntityState.Modified;
                 db.SaveChanges();
                 //return RedirectToAction("Index");
