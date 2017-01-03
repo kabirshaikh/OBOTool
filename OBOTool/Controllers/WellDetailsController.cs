@@ -105,7 +105,9 @@ namespace OBOTool.Controllers
                 db.SaveChanges();
                 //return RedirectToAction("Index");
 
-                return Json("Save Successful");
+                //return Json("Save Successful");
+                JsonResult rs = Json(wellDetail);
+                return rs;
             }
             ViewBag.BusinessUnitId = new SelectList(db.BusinessUnits, "Id", "Name", wellDetail.BusinessUnitId);
             ViewBag.ElectionId = new SelectList(db.Elections, "Id", "Name", wellDetail.ElectionId);

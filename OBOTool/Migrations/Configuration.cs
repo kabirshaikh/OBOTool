@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.ApplicationInsights.Extensibility.Implementation;
 using OBOTool.Models;
 
 namespace OBOTool.Migrations
@@ -41,7 +42,9 @@ namespace OBOTool.Migrations
                     Name = "ARBALEST 66-0607H",
                     ApiNumber = "4900561702",
                     Latitude = 43.560733,
-                    Longitude = -105.557064
+                    Longitude = -105.557064,
+                    CommentDate = DateTime.Now,
+                    Commenter = "seed"
                 });
 
         }

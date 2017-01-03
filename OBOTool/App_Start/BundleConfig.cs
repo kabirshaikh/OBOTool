@@ -22,13 +22,16 @@ namespace OBOTool
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/bootstrap-datepicker.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-datepicker.min.css",
                       "~/Scripts/DataTables/datatables.min.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css"
+                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/custom").Include(
                 "~/Scripts/DataTables/datatables.min.js",
