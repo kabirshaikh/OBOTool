@@ -514,6 +514,8 @@
     <Content Include="Views\WellDetails\Edit.cshtml" />
     <Content Include="Views\WellDetails\Create_Orig.cshtml" />
     <Content Include="Views\WellDetails\Details - Copy.cshtml" />
+    <Content Include="Views\WellDetails\_Edit.cshtml" />
+    <Content Include="Views\WellDetails\_Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,501 @@
+﻿@model OBOTool.Models.WellDetail
+
+<div style="border-top:1px solid #aaa">
+    <div class="MBU_OuterContainer">
+        <div class="MBU_OuterContainerRow">
+
+            <div id="Information" class="MBU_InnerSections">
+                <div>
+                    <div class="header">Well Header</div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ApiNumber) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.ApiNumber)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.Duwi) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.Duwi)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.BusinessUnit.Name) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.BusinessUnit.Name) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.FieldName) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.FieldName)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PartnerAfe) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.PartnerAfe)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.Operator) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.Operator)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.Election.Name) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.Election.Name)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.County) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.County)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.State) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.Section)</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="header">WDRF</div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposalLetter)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.ProposalLetter) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposalLetterDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.ProposalLetterDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ElectionLetter)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.ElectionLetter) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ElectionLetterDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.ElectionLetterDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.DailyDrillingReport)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.DailyDrillingReport) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.DailyDrillingReportDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.DailyDrillingReportDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.FinalDirectionalSurvey)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.FinalDirectionalSurvey) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.FinalDirectionalSurveyDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.FinalDirectionalSurveyDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.OpenHoleCasedHoleProcessedLogs)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.OpenHoleCasedHoleProcessedLogs) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.OpenHoleCasedHoleProcessedLogsDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.OpenHoleCasedHoleProcessedLogsDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.FinalMwd)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.FinalMwd) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.FinalMwdDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.FinalMwdDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.MudlogFinalUpdate)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.MudlogFinalUpdate) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.MudlogFinalUpdateDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.MudlogFinalUpdateDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.CoreReportsAnalysesAllRelatedData)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.CoreReportsAnalysesAllRelatedData) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.CoreReportsAnalysesAllRelatedDataDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.CoreReportsAnalysesAllRelatedDataDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.DailyCompletionReport)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.DailyCompletionReport) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.DailyCompletionReportDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.DailyCompletionReportDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostFracReportOrPostCompletionReport)</div>
+                        <div class="OnePair_Value"> @Html.YesNo(Model.PostFracReportOrPostCompletionReport) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostFracReportOrPostCompletionReportDate) </div>
+                        <div class="OnePair_Value"> @Html.DisplayFor(model => model.PostFracReportOrPostCompletionReportDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.FlowbackReport)</div>
+                        <div class="OnePair_Value">@Html.YesNo(Model.FlowbackReport) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.FlowbackReportDate) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.FlowbackReportDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.AdditionalProductTesting)</div>
+                        <div class="OnePair_Value">@Html.YesNo(Model.AdditionalProductTesting) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.AdditionalProductTestingDate) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.AdditionalProductTestingDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.DrillStemReport)</div>
+                        <div class="OnePair_Value">@Html.YesNo(Model.DrillStemReport) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.DrillStemReportDate) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.DrillStemReportDate)</div>
+                    </div>
+
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.DailyProductionReport)</div>
+                        <div class="OnePair_Value">@Html.YesNo(Model.DailyProductionReport) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.DailyProductionReportDate) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.DailyProductionReportDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.MonthlyProductionReport)</div>
+                        <div class="OnePair_Value">@Html.YesNo(Model.MonthlyProductionReport) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.MonthlyProductionReportDate) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.MonthlyProductionReportDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.CopyOfGasContract)</div>
+                        <div class="OnePair_Value">@Html.YesNo(Model.CopyOfGasContract) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.CopyOfGasContractDate) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.CopyOfGasContractDate)</div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.FullyExecutedStateAndFederalForms)</div>
+                        <div class="OnePair_Value">@Html.YesNo(Model.FullyExecutedStateAndFederalForms) </div>
+                    </div>
+                    <div class="OnePair">
+                        <div class="OnePair_Name">@Html.DisplayNameFor(model => model.FullyExecutedStateAndFederalFormsDate) </div>
+                        <div class="OnePair_Value">@Html.DisplayFor(model => model.FullyExecutedStateAndFederalFormsDate)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="proposalsContainer" class="MBU_InnerSections">
+
+                <div>
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Proposals</div>
+                                <br />
+                                <div class="header">Well Type</div>
+                                <div class="OnePair_First">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedEstimatedSpudDate) </div>
+                                    <div class="OnePair_Value"> @Html.DisplayFor(model => model.ProposedEstimatedSpudDate)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedFormation) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedFormation)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedNumberOfCsgStrings) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedNumberOfCsgStrings)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedStringOneDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedStringOneDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedStringOneDescription) </div>
+                                    <div class="OnePair_Value"> @Html.DisplayFor(model => model.ProposedStringOneDescription)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedStringTwoDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedStringTwoDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedStringTwoDescription) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedStringTwoDescription) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedStringThreeDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedStringThreeDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedStringThreeDescription) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedStringThreeDescription) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedStringFourDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedStringFourDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedStringFourDescription) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedStringFourDescription) </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="performanceContainer">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Performance</div>
+                                <div class="OnePair_First">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedPlanDays) </div>
+                                    <div class="OnePair_Value"> @Html.DisplayFor(model => model.ProposedPlanDays)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedAfeCost) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.ProposedAfeCost)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.ProposedIncludesConstruction) </div>
+                                    <div class="OnePair_Value">@Html.YesNo(Model.ProposedIncludesConstruction)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedIncludesRigMove) </div>
+                                    <div class="OnePair_Value">@Html.YesNo(Model.ProposedIncludesRigMove) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedIncludesProdCsgCmt) </div>
+                                    <div class="OnePair_Value"> @Html.YesNo(Model.ProposedIncludesProdCsgCmt)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="continuityContainer">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Continuity</div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedBatchDrilling) </div>
+                                    <div class="OnePair_Value">@Html.YesNo(Model.ProposedBatchDrilling) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedSpudderRig) </div>
+                                    <div class="OnePair_Value"> @Html.YesNo(Model.ProposedSpudderRig)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="drillingStrategyContainer">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Drilling Strategy</div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedTotalDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.ProposedTotalDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedTotalDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.ProposedTotalDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedUsingRss) </div>
+                                    <div class="OnePair_Value"> @Html.YesNo(Model.ProposedUsingRss)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedLateralLength) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.ProposedLateralLength) </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="commentsContainer">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Comments</div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedMudComments) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.ProposedMudComments) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.ProposedOtherComments) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.ProposedOtherComments) </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="postDrillContainer" class="MBU_InnerSections">
+
+                <div>
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Post Drill</div>
+                                <br />
+                                <div class="header">Well Type</div>
+                                <div class="OnePair_First">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillSpudDate) </div>
+                                    <div class="OnePair_Value"> @Html.DisplayFor(model => model.PostDrillSpudDate)</div>
+                                </div>
+                                <div class="OnePair_First">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillRRDate) </div>
+                                    <div class="OnePair_Value"> @Html.DisplayFor(model => model.PostDrillRRDate)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillFormation) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillFormation)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillNumberOfCsgStrings) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillNumberOfCsgStrings)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillStringOneDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillStringOneDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillStringOneDescription) </div>
+                                    <div class="OnePair_Value"> @Html.DisplayFor(model => model.PostDrillStringOneDescription)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillStringTwoDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillStringTwoDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillStringTwoDescription) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillStringTwoDescription) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillStringThreeDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillStringThreeDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillStringThreeDescription) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillStringThreeDescription) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillStringFourDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillStringFourDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillStringFourDescription) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillStringFourDescription) </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="performanceContainerPD">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Performance</div>
+                                <div class="OnePair_First">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillDrillingDays) </div>
+                                    <div class="OnePair_Value"> @Html.DisplayFor(model => model.PostDrillDrillingDays)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillActualCost) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillActualCost)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillFieldEstimate) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(model => model.PostDrillFieldEstimate)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name"> @Html.DisplayNameFor(model => model.PostDrillIncludesConstruction) </div>
+                                    <div class="OnePair_Value">@Html.YesNo(Model.PostDrillIncludesConstruction)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillIncludesRigMove) </div>
+                                    <div class="OnePair_Value">@Html.YesNo(Model.PostDrillIncludesRigMove) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillIncludesProdCsgCmt) </div>
+                                    <div class="OnePair_Value"> @Html.YesNo(Model.PostDrillIncludesProdCsgCmt)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillSidetrack) </div>
+                                    <div class="OnePair_Value"> @Html.YesNo(Model.PostDrillSidetrack)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="continuityContainerPD">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Continuity</div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillBatchDrilling) </div>
+                                    <div class="OnePair_Value">@Html.YesNo(Model.PostDrillBatchDrilling) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillSpudderRig) </div>
+                                    <div class="OnePair_Value"> @Html.YesNo(Model.PostDrillSpudderRig)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="drillingStrategyContainerPD">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Drilling Strategy</div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillTotalDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.PostDrillTotalDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillTotalDepth) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.PostDrillTotalDepth) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillUsingRss) </div>
+                                    <div class="OnePair_Value"> @Html.YesNo(Model.PostDrillUsingRss)</div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillLateralLength) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.PostDrillLateralLength) </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="commentsContainerPD">
+                    <div class="LocationContainerRow">
+                        <div class="LocationLeftCell">
+                            <div class="LocationLeftTable">
+                                <div class="header">Comments</div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillMudComments) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.PostDrillMudComments) </div>
+                                </div>
+                                <div class="OnePair">
+                                    <div class="OnePair_Name">@Html.DisplayNameFor(model => model.PostDrillOtherComments) </div>
+                                    <div class="OnePair_Value">@Html.DisplayFor(m => m.PostDrillOtherComments) </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -242,7 +242,6 @@ namespace OBOTool.Models
         [DisplayName("Proposal Letter?")]
         public bool ProposalLetter { get; set; }
 
-
         [DisplayFormat(DataFormatString = DateFormatString, ApplyFormatInEditMode = true)]
         [DisplayName("Proposal Letter Date")]
         public DateTime? ProposalLetterDate { get; set; }
