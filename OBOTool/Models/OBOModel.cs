@@ -23,7 +23,7 @@ namespace OBOTool.Models
          public virtual DbSet<WellDetail> WellDetails { get; set; }
          public virtual DbSet<BusinessUnit> BusinessUnits { get; set; }
          public virtual DbSet<Election> Elections { get; set; }
-
+         public virtual DbSet<State> States { get; set; }
 
     }
 }

@@ -35,10 +35,10 @@
                 @Html.DisplayNameFor(model => model.State)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Section)
+                @Html.DisplayNameFor(model => model.ProposedFormation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Township)
+                @Html.DisplayNameFor(model => model.Operator)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Range)
@@ -65,13 +65,13 @@
             @Html.DisplayFor(modelItem => item.County)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.State)
+            @Html.DisplayFor(modelItem => item.State.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Section)
+            @Html.DisplayFor(modelItem => item.ProposedFormation)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Township)
+            @Html.DisplayFor(modelItem => item.Operator)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Range)
@@ -81,9 +81,9 @@
         </td>
         
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+            @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.Id})
         </td>
     </tr>
 }

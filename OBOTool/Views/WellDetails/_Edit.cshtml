@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-md-3">
                             @Html.LabelFor(model => model.ApiNumber)
-                            @Html.EditorFor(model => model.ApiNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.EditorFor(model => model.ApiNumber, new { htmlAttributes = new { @class = "form-control", @type = "number" } })
                             @Html.ValidationMessageFor(model => model.ApiNumber, "", new { @class = "text-danger" })
                         </div>
                         <div class="col-md-3">
@@ -81,9 +81,8 @@
                             @Html.ValidationMessageFor(model => model.County, "", new { @class = "text-danger" })
                         </div>
                         <div class="col-md-3">
-                            @Html.LabelFor(model => model.State)
-                            @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                            @Html.LabelFor(model => model.StateId)
+                            @Html.DropDownList("StateId", null, new { @class = "form-control" })
                         </div>
                         <div class="col-md-3">
                             @Html.LabelFor(model => model.Section)

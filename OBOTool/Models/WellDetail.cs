@@ -19,9 +19,12 @@ namespace OBOTool.Models
 
         #region WellData
 
+        [Required]
         [DisplayName("Well Name")]
         public string Name { get; set; }
         [DisplayName("API Number")]
+        [MinLength(10)]
+        [MaxLength(10)]
         public string ApiNumber { get; set; }
         [DisplayName("Well DUWI-A")]
         public string Duwi { get; set; }
@@ -35,7 +38,11 @@ namespace OBOTool.Models
         [DisplayName("Election")]
         public int? ElectionId { get; set; }
         public string County { get; set; }
-        public string State { get; set; }//Lookup
+        //public string State { get; set; }
+        [DisplayName("State")]
+        public int? StateId { get; set; }//Lookup
+        //public int? StateId { get; set; }//Lookup
+
         [MaxLength(2)]
         public string Section { get; set; }
         public string Township { get; set; }
@@ -362,5 +369,6 @@ namespace OBOTool.Models
 
         public virtual BusinessUnit BusinessUnit { get; set; }
         public virtual Election Election { get; set; }
+        public virtual State State { get; set; }
     }
 }

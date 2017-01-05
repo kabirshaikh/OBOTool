@@ -19,6 +19,15 @@ namespace OBOTool.Migrations
 
         protected override void Seed(OBOTool.Models.OBOModel context)
         {
+            IEnumerable<State> states = new List<State>
+            {
+                new State(),
+                new State {Id=1, Name = "Alabama"},
+                new State {Id=2, Name = "Texas"},
+                new State {Id=3, Name = "Wyoming"}
+            };
+            context.States.AddRange(states);
+
             IEnumerable<BusinessUnit> businessUnits = new List<BusinessUnit>
             {
                 new BusinessUnit(),
